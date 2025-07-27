@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.node {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.node:hover {
+  background-color: darkblue;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.selected-node {
+  box-shadow: 0 0 8px 4px #007bff;
+  border: 2px solid blue;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+.graph-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+.graph-button:hover {
+  background-color: #f2f2f2;
+}
+.graph-button.start-active {
+  background-color: #00cc66;
+  color: white;
+}
+.graph-button.end-active {
+  background-color: #ff6666;
+  color: white;
+}
+.start-node {
+  background-color: green !important;
+  color: white;
+  box-shadow: 0 0 8px green;
+}
+.end-node {
+  background-color: red !important;
+  color: white;
+  box-shadow: 0 0 8px red;
+}
+.path-node {
+  background-color: gold !important;
+  color: black;
+  box-shadow: 0 0 10px gold;
+}
+.path-edge {
+  stroke: gold;
+  stroke-width: 3;
+  opacity: 1;
+}
+.total-distance {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
